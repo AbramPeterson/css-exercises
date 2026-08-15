@@ -2,28 +2,85 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-parent-div {
+  display: flex;
+  /* --- Added Styles --- */
+  flex: 1; /* Forces the middle section to stretch vertically and push the footer down */
 }
 
 .header {
-  height: 72px;
+  min-height: 72px;
   background: darkmagenta;
   color: white;
+  /* Where I added my code */
+  font-weight: 900;
+  font-size: 32px;
+  margin: 0px;
+  padding: 0px 0px 0px 16px;
+  display: flex;
+  justify-content: center;
+  justify-content: start;
+  align-items: center;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  /* Where I added my code */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Where I added my code */
+.main-parent-div {
+  display: flex;
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
+  /* Where I added my code */
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 300px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  list-style-type: none;
+}
+
+.sidebar ul {
+  list-style-type: none; /* Removes the bullets */
+  padding: 16px;       
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 16px; /* Adjust the pixels to change the spacing size */
+}
+
+/* Where I added my code */
+.main-content {
+  display: flex;
+  padding: 48px;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  /* Where I added my code */
+  flex: 1 1 300px;
 }
